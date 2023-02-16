@@ -1,0 +1,6 @@
+*.pyc
+*~
+__pycache__
+mv_lbem
+db.sqlite3
+.DS_Store
