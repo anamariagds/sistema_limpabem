@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import Funcionario
+from .models import Atendente, Helper
 
-admin.site.register(Funcionario)
+admin.site.register(Atendente)
+admin.site.register(Helper)

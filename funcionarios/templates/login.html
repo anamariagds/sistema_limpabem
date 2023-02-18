@@ -12,11 +12,15 @@
             <div class="alert alert-danger" role="alert">
                 <p>Usario inválido.</p>
             </div>
+        {% elif status == '2' %}
+            <div class="alert alert-danger" role="alert">
+                <p>Erro</p>
+            </div>
         {% endif %}
         <h2>Login</h2>
         <p>Entre no sistema.</p>
         <hr>
-        <form action="{% url 'validando_acesso' %}" method="POST">{% csrf_token %}
+        <form method="POST" action="{% url 'validando_acesso' %}" >{% csrf_token %}
             <label>email</label>
             <input type="text" class="form-control" placeholder="Email..." name="email">
             <br>
