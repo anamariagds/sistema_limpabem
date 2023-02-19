@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Limpa Bem</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  href="{% static 'funcionario/css/home.css' %}" rel="stylesheet">
+   
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho-menu">
+            <a class="cabecalho-menu-item" href="{% url 'login' %}">Atendentes</a>
+            <a class="cabecalho-menu-item" href="#">Gerente</a>
+            <a class="cabecalho-menu-item" href="">Cliente</a>
+        </nav>
+    </header>
+    <main class="conteudo">
+        <section class="conteudo-principal">
+            <div class="conteudo-principal-escrito">
+                <h1 class="conteudo-principal-escrito-titulo">Limpa Bem</h1>
+                <h2 class="conteudo-principal-escrito-subtitulo">Oferecemos o melhor trbalho de Limpeza da cidade e que cabe no seu bolso.</h2>
+            </div>
+        </section>
+        <section  class="conteudo-secundario">
+            <h3  class="conteudo-secundario-titulo">Nossos serviços</h3>
+            <p class="conteudo-secundario-paragrafo">Limpeza Simples - R$100,00</p>
+            <p class="conteudo-secundario-paragrafo">Limpeza profunda - R$250,00</p>
+        </section>
+
+    </main>
+    <footer class="rodape">
+
+    </footer>
+</body>
+</html>

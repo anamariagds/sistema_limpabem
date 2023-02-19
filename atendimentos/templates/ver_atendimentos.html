@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
+    
+    
     <style type="text/css">
         span{
             color: #e3f2fd;
@@ -18,8 +20,10 @@
     <title>{{atendimento.nome_cliente}}</title>
   </head>
   <body>
+
     <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
         <div class="col-lg-12" style="text-align: right;">
+            <button type="button" class="btn btn-light" ><a  href="{% url 'sair' %}">Sair</a></button> 
             <button type="button" class="btn btn-light" ><a  href="{% url 'novo_atendimento' %}">Cadastrar atendimento</a></button>      
         </div>    
     </nav>
@@ -36,11 +40,11 @@
                             <h6 class="card-subtitle mb-2 text-muted">{{a.nome_cliente}}</h6>
                             <td>
                             {% if a.status == "R" %}
-                               <h5><span class="badge bg-success">Realizado</span></h5> 
+                               <span class="badge bg-success">Realizado</span>
                             {% elif a.status == "C" %}
-                               <h5><span  class="badge bg-danger">Cancelado</span></h5> 
+                               <span  class="badge bg-danger">Cancelado</span>
                             {% elif a.status == "P"  %}
-                                <h5><span class="badge bg-primary">Pendente</span></h5>
+                                <span class="badge bg-primary">Pendente</span>
                             {% endif%}  
                             </td>
                             <a href="{% url 'atendimento_detalhes' a.id %}" class="card-link">Detalhes</a>
@@ -59,6 +63,7 @@
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" ></script>
+    </script>
 
     
   </body>

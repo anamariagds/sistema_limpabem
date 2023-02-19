@@ -1,5 +1,10 @@
 from django.shortcuts import render, HttpResponse, redirect
+
+
 from .models import Atendente
+
+def home(request):
+    return render(request, 'home.html')
 
 def login(request):
     status = request.GET.get('status')

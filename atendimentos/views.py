@@ -16,7 +16,7 @@ def ver_atendimentos(request):
     
 def novo_atendimento(request):
     form = atendimentoForm(request.POST or None) #instancia do formulario
-    funcionario = Atendente.objects.get(id= request.session['funcionario'])
+   
     form.fields['atendente'].initial =  request.session['funcionario']
     if form.is_valid():
         form.save()
