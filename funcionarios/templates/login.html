@@ -20,7 +20,8 @@
         <h2>Login</h2>
         <p>Entre no sistema.</p>
         <hr>
-        <form method="POST" action="{% url 'validando_acesso' %}" >{% csrf_token %}
+        <form method="POST" action="{% url 'validando_acesso' %}" >
+            {% csrf_token %}
             <label>email</label>
             <input type="text" class="form-control" placeholder="Email..." name="email">
             <br>

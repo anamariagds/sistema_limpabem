@@ -17,7 +17,7 @@ def novo_atendimento(request):
     form = atendimentoForm(request.POST or None) #instancia do formulario
     if form.is_valid():
         form.save()
-        return redirect('/atendimento/ver_atendimentos/') #redirect evita repetir
+        return redirect('/atendimento/ver_atendimentos/') 
     
     return render(request, 'novo_atendimento.html', {'form': form})
 
@@ -25,4 +25,15 @@ def atendimento_detalhes(request, id):
     if request.method == "GET":
         atendimento = Atendimento.objects.get(id=id)
         return render(request, 'atendimento_detalhes.html', {'atendimento': atendimento})
+
+def atualizar_status(request, id_atendimento):
+    atendimento = Atendimento.objects.get(id=id_atendimento)
+    form = atendimentoForm(request.POST or None, instance=atendimento)
+    if form.is_valid():
+        form.save()
+        return redirect('/atendimento/ver_atendimentos/') 
+    
+    return render(request, 'atendimento_atualizado.html', {'form': form})
+
+
     

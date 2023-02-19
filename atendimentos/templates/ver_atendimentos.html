@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <style type="text/css">
+        span{
+            color: #e3f2fd;
+
+        }
+
+    </style>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,11 +36,11 @@
                             <h6 class="card-subtitle mb-2 text-muted">{{a.nome_cliente}}</h6>
                             <td>
                             {% if a.status == "R" %}
-                               <h5><span class="badge text-bg-primary">Realizado</span></h5> 
+                               <h5><span class="badge bg-success">Realizado</span></h5> 
                             {% elif a.status == "C" %}
-                               <h5><span class="badge text-bg-success">Cancelado</span></h5> 
+                               <h5><span  class="badge bg-danger">Cancelado</span></h5> 
                             {% elif a.status == "P"  %}
-                                <h5><span class="badge text-bg-success">Pendente</span></h5>
+                                <h5><span class="badge bg-primary">Pendente</span></h5>
                             {% endif%}  
                             </td>
                             <a href="{% url 'atendimento_detalhes' a.id %}" class="card-link">Detalhes</a>
