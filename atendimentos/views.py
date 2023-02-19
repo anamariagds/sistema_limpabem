@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect
 from funcionarios.models import Atendente
 from .models import Atendimento
+from django import forms
 from .forms import atendimentoForm
 
 
@@ -15,6 +16,8 @@ def ver_atendimentos(request):
     
 def novo_atendimento(request):
     form = atendimentoForm(request.POST or None) #instancia do formulario
+    funcionario = Atendente.objects.get(id= request.session['funcionario'])
+    form.fields['atendente'].initial =  request.session['funcionario']
     if form.is_valid():
         form.save()
         return redirect('/atendimento/ver_atendimentos/') 
