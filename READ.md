@@ -20,7 +20,7 @@
         - abra o servidor no navegador ( http://127.0.0.1:8000/admin/ )
 - crie um super usuário python manage.py createsuperuser -  crie um super usuario para acessar o sistema, e agora cadastre nas tabelas serviços, atendentes, helper e por fim atendimentos. É necessario seguir essa ordem pela dependencia no bd; também é preciso para poder acessar pela interface do atendente, que só o admin pode cadastrar.
 
--  cadastre dois atendentes (email: monica@gmail.com - senha:123456789) (email: mario@email.com - senha: 12345) e para cada atendente cadastre pelo menos 3 atendimentos.
+-  cadastre dois atendentes (email: monica@gmail.com - senha:123456789) (email: mario@email.com - senha: 1234567890) e para cada atendente cadastre pelo menos 3 atendimentos.
 
     
     <p align="justify">Nessa área você pode navegar e fazer cadastros como dito acima.</p>
