@@ -17,11 +17,15 @@
  - Dê ctrl + c no terminal e agora faça:
         - python manage.py migrate
         - python manage.py runserver
-        - abra o servidor no navegador ( http://127.0.0.1:8000/admin/ ) usuario : gerente senha: 12345678
+        - abra o servidor no navegador ( http://127.0.0.1:8000/admin/ )
+- crie um super usuário python manage.py createsuperuser -  crie um super usuario para acessar o sistema, e agora cadastre nas tabelas serviços, atendentes, helper e por fim atendimentos. É necessario seguir essa ordem pela dependencia no bd; também é preciso para poder acessar pela interface do atendente, que só o admin pode cadastrar.
 
-<p align="justify">Nessa área você pode navegar e fazer cadastros como dito acima.</p>
+-  cadastre dois atendentes (email: monica@gmail.com - senha:123456789) (email: mario@email.com - senha: 12345) e para cada atendente cadastre pelo menos 3 atendimentos.
+
+    
+    <p align="justify">Nessa área você pode navegar e fazer cadastros como dito acima.</p>
 
 ###Acessando pela interface criada:
- - (http://127.0.0.1:8000/sistema/) - pagina inicial, a partir daqui clicando em atendente terá a pagina de login desse no sistema já tem cadastrado dois atendentes (email: monica@gmail.com - senha:123456789) (email: mario@email.com - senha: 12345)
+ - (http://127.0.0.1:8000/sistema/) - pagina inicial, a partir daqui clicando em atendente terá a pagina de login desse no sistema. Acesse com os atendentes que você cadastrou anteriormente.
 
 <p align="justify">aparecem os atendimentos cadastrados pelo atendente especifico, na aba superior ele pode cadastrar um novo, que automaticamente é cadastrado como dele. Clicando em detalhes do atendimento, aparecem todas as informações necessarios e a opção de mudar o status. E na área do atendente também tem a opção de sair do sistema que redireciona para pagina de login que na parte inferior tem a opção de voltar para pagina inicial.</p>
