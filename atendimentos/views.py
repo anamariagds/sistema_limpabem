@@ -15,7 +15,7 @@ def ver_atendimentos(request):
         return redirect('/sistema/login/?status=2')
     
 def novo_atendimento(request):
-    form = atendimentoForm(request.POST or None) #instancia do formulario
+    form = atendimentoForm(request.POST or None) 
    
     form.fields['atendente'].initial =  request.session['funcionario']
     if form.is_valid():
